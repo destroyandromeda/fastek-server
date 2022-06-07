@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "def2104f-5c94-43ee-878a-e6fdf4561cf6",
+		"name": "fastek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7802482"
+	},
+	"item": [
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photos",
+									"type": "file",
+									"src": [
+										"/Users/destr/Pictures/2022-03-23 11.04.09.jpg",
+										"/Users/destr/Pictures/2022-05-18 13.40.42.jpg"
+									]
+								},
+								{
+									"key": "albumId",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/photo",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"photo"
+							],
+							"query": [
+								{
+									"key": "asd",
+									"value": "asdasdas",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public picture",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/photo/1654547705421.jpeg",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"photo",
+								"1654547705421.jpeg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/photo/20",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"photo",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all photo in album",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/photo/3/all",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"photo",
+								"3",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "album",
+			"item": [
+				{
+					"name": "one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/album/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"album",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/album",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"album"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"album test add\",\n    \"description\": \"description test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/album",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"album"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"album test upd \",\n    \"description\": \"description test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/album/3",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"album",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/album/4",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"album",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
